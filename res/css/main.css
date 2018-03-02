@@ -2986,13 +2986,13 @@ section.pull-up {
 }
 
 .btn.btn-outline-white {
-  border-color: #fff;
+  border-color: #1e8fe6;
   color: #fff
 }
 
 .btn.btn-outline-white:focus,
 .btn.btn-outline-white:hover {
-  background-color: #fff;
+  background-color: #1e8fe6;
   color: #000
 }
 
