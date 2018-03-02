@@ -7,6 +7,7 @@
 ## Screenshot
 
 ![screenshot-2018-3-03](https://github.com/teknothon/teknothon.github.io/blob/master/1.PNG)
+![screenshot-2018-3-03](https://github.com/teknothon/teknothon.github.io/blob/master/2.PNG)
 
 
 ## License
