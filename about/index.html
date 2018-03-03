@@ -25,10 +25,11 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
   <meta name="keywords" content="Teknothon, JMI, Jamia Millia Islamia, New Delhi, event">
 
   <!-- Social media tags -->
-  <!-- Open Graph -->  <meta property="og:title" content="TEKNOTHON">
+  <!-- Open Graph -->
+  <meta property="og:title" content="TEKNOTHON">
   <meta property="og:description" content="A Techno-Cultural Event. This March, at Jamia Millia Islamia.">
   <meta property="og:image" content="res/images/logos/light-social.jpg">
-  <meta property="og:url" content="http://www.Teknothon.tech">
+  <meta property="og:url" content="https://Teknothon.github.io">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@sahilqaiser">
@@ -85,13 +86,17 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
 
         <div id="navbar" class="navbar-collapse collapse col-lg-9 pull-right">
           <ul class="nav navbar-nav font-family-alt letter-spacing-1 text-uppercase font-weight-700">
-            <li><a href="/" class="line-height-unset">About</a></li>
-            <li><a href="/about/" class="line-height-unset">Events</a></li>
+            <li><a href="/" class="line-height-unset">Home</a></li>
+            <li><a href="/about/" class="line-height-unset">About</a></li>
             <li><a href="#page-top" class="line-height-unset">Our Team</a></li>
-            <li><a href="#page-top" class="line-height-unset">Alumni</a></li>
+            <li><a href="#page-top" class="line-height-unset">Events</a></li>
             <li><a href="/sponsors/" class="line-height-unset">Sponsors</a></li>
-            <li><a href="#page-top" class="line-height-unset">Contact Us</a></li>
-            <li><a href="#page-top" class="page-scroll">Sponsorship Registration</a></li>
+            <li><a href="#page-top" class="page-scroll">Contact Us</a></li>
+            <li class="bg-base-color">
+              <a href="/register/" class="line-height-unset width-100">
+                Sponsorship Registration
+              </a>
+            </li>
           </ul>
         </div>
         <!-- //.navbar-collapse -->
@@ -104,111 +109,104 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
 
 
 
-  <!-- Section - Registration start -->
-  <section id="registration" class="bg-white-2">
+  <!-- Section - Contact Start -->
+  <section id="contact" class="bg-white-2">
     <div class="container">
       <div class="row no-padding-rl">
         <div class="col-md-12">
           <h2 class="font-family-alt font-weight-700 sm-title-large title-extra-large-2 text-gray-dark-2">
-            Register as Sponsors for Teknothon
+            Contact Us
           </h2>
           <span class="bg-base-color xs-margin-6 xs-no-margin-rl margin-3 no-margin-rl separator-line-extra-thick-long"></span>
         </div>
-        <!-- //.col-md-12 -->
+        <!-- //.col-md-10 -->
       </div>
       <!-- //.row -->
 
-      <div class="font-family-alt font-weight-700 sm-title-large title-extra-large-2 text-gray-dark-2">
-        <p align="center">
-          Before registering, please take your time to read and select from the following Sponsorship Plans regarding the event:
-        </p>
+      <div class="row margin-4 no-margin-rl no-margin-bottom">
+        <div class="col-md-5 no-padding-rl">
+          <div class="row text-center">
+            <i class="fa fa-envelope-o display-block text-base-color title-extra-large-2"></i>
+            <br>
+            <h4 class="font-weight-300 letter-spacing-1">
+              teknothon.dcs@gmail.com<br>info@teknothon.tech
+            </h4>
+          </div>
+          <!-- //.row -->
 
-        <div class="container" align="center">
-          <div class="plans_img">
-            <img src="plans.jpg" align="center" width="60%">
-          </div>  
-          <!-- //Features Box Style v3 End -->
+          <p class="margin-8 no-margin-bottom no-margin-rl font-family-alt text-extra-large">
+            Send us your queries by email.<br>
+            We endeavour to answer them all within 24 hours.
+          </p>
+
+          <br>
+          <form name="contact" action="thank-you" method="post" id="form-contact" netlify>
+            <div class="row margin-4 no-margin-rl">
+              <input type="text" placeholder="Your Name" name="name" class="required" required>
+              <input type="email" placeholder="Your Email" name="email" class="required email" required>
+              <textarea placeholder="Your Message" name="message" class="required" required></textarea>
+            </div>
+            <!-- //.row -->
+
+            <div class="row margin-4 no-margin-rl">
+              <span class="display-block font-family-alt letter-spacing-1 text-gray-dark-2 text-small text-uppercase">
+                * Please enter all fields correctly
+              </span>
+            </div>
+            <!-- //.row -->
+
+            <div class="row margin-4 no-margin-rl">
+              <button id="btn-form-contact" type="submit" class="btn btn-base-color btn-medium">
+                Send Message
+              </button>
+            </div>
+            <!-- //.row -->
+          </form>
         </div>
-        
-      </div>
-
-      <span class="bg-gray-light-2 separator-line-full"></span>
-
-      <div class="row margin-5 no-margin-rl no-margin-bottom">
         <!-- //.col-md-5 -->
 
-        <div class="form_row" width="60%">
-          <br>
-          
-          <div class="row" align="left">
-              <div class="text">
-                  <h2 align="center" class="font-family-alt font-weight-700 sm-title-large title-extra-large-2 text-gray-dark-2">SPONSORSHIP Registration Form</h1>
-                  </div><br><br>
-            <!-- Google Spreadsheet START HERE -->
-            <!-- Style The Contact Form How Ever You Prefer -->
-            <link rel="stylesheet" href="../res/style.css">
-            <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="teknothon.dcs@gmail.com"
-            action="https://script.google.com/macros/s/AKfycbxOkcuBL-08vxmUKtv3TGeg2H1WMyDvATnxVNpRbHg1l4Ehqb4/exec">
-              <!-- change the form action to your script url -->
-
-              <fieldset class="pure-group">
-                <label for="name">Name: </label><br>
-                <input id="name" name="name" placeholder="Company/Individual name :" />
-              </fieldset>
-
-              <fieldset class="pure-group">
-                <label for="email"><em>Your</em> Email Address:</label><br>
-                <input id="email" name="email" type="email" value=""
-                required placeholder="your.name@email.com"/>
-                <span id="email-invalid" style="display:none">
-                  Must be a valid email address</span>
-              </fieldset>
-
-              <fieldset class="pure-group">
-                <label for="color">Sponsorship Plan : </label><br>
-                <input id="money_limit" name="money_limit" placeholder="5000" />
-              </fieldset>
-
-              <fieldset class="pure-group">
-                <label for="message">Message: </label>
-                <textarea id="message" name="message" rows="10" width="80%"
-                placeholder="Tell us any other plans or deals..."></textarea>
-              </fieldset>
-              <fieldset align="right">
-                <button class="button-success pure-button button-xlarge">
-                  <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-              </fieldset>
-            </form>
-
-            <!-- Customise the Thankyou Message People See when they submit the form: -->
-            <div style="display:none;" id="thankyou_message">
-              <h2><em>Thanks</em> for contacting us!
-                We will get back to you soon!</h2>
+        <div class="contact-address col-md-6 col-md-offset-1">
+          <div class="row text-center">
+            <i class="fa fa-map-marker display-block text-base-color title-extra-large-2"></i>
+            <!-- <span class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">
+              Our Location
+            </span> -->
+            <br>
+            <h4 class="font-weight-300 letter-spacing-1">
+              Jamia Millia Islamia
+              <br>Department of Computer Science
+              <br>Jamia Nagar
+              <br>New Delhi 110025
+            </h4>
+          </div>
+          <!-- //.row -->
+          <div class="row text-center">
+            <div class="margin-8 no-margin-bottom no-margin-rl map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.2186197676856!2d77.27821691451206!3d28.563197193967753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce38c812c0029%3A0x73f56fbe2fc71d28!2sDepartment+of+Computer+Science!5e0!3m2!1sen!2sin!4v1520092804003"
+                frameborder="0"
+                allowfullscreen>
+              </iframe>
             </div>
+            <!-- //.map -->
+          </div>
+          <!-- //.row -->
+        </div>
+        <!-- //.col-md-6 -->
+      </div>
+      <!-- //.row -->
+    </div>
+    <!-- //.container -->
+  </section>
+  <!-- //Section - Contact End -->
 
-            <!-- Submit the Form to Google Using "AJAX" -->
-            <script data-cfasync="false" type="text/javascript"
-            src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-            <!-- <script data-cfasync="false" type="text/javascript"
-            src="/form-submission-handler.js"></script> -->
-          <!-- END -->
-                    </div>
-                  </div>
-                  <!-- //.col-md-6 -->
-                </div>
-                <!-- //.row -->
-              </div>
-              <!-- //.container -->
-            </section>
-            <!-- //Section - Registration end -->
-            <span class="bg-gray-light-2 separator-line-full"></span>
 
 
   <!-- Section - Event banner start -->
   <section id="event-banner" class="bg-white pull-up">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 text-center">
+        <div class="col-sm-4 text-center">
           <i class="fa fa-clock-o display-block text-base-color title-extra-large-2"></i>
           <span class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">
             Date &amp; Time
@@ -220,7 +218,7 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
         </div>
         <!-- //.col-sm-4 -->
 
-        <div class="col-sm-6 xs-margin-8 xs-no-margin-bottom xs-no-margin-rl text-center">
+        <div class="col-sm-4 xs-margin-8 xs-no-margin-bottom xs-no-margin-rl text-center">
           <i class="fa fa-map-marker display-block text-base-color title-extra-large-2"></i>
           <span class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">
             Venue
@@ -229,6 +227,13 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
             Department of Computer Science,<br>
             Jamia Millia Islamia
           </p>
+        </div>
+        <!-- //.col-sm-4 -->
+
+        <div id="banner-registration" class="col-sm-4 xs-margin-8 xs-no-margin-bottom xs-no-margin-rl text-center">
+          <a href="/register/" class="btn btn-outline-base-color sm-btn-medium btn-large no-margin-rl">
+            <span>Register for<br>Sponsorship</span>
+          </a>
         </div>
         <!-- //.col-sm-4 -->
       </div>
@@ -297,10 +302,10 @@ Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad
 
         <div class="col-sm-8">
           <div class="footer-social text-right">
-            <ul class="list-inline list-unstyled no-margin xs-text-center xs-title-small title-medium">
-              <li><a href="https://facebook.com/teknothon.dcs"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/sahilqaiser"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://instagram.com/teknothon2018"><i class="fa fa-instagram"></i></a></li>
+              <ul class="list-inline list-unstyled no-margin xs-text-center xs-title-small title-medium">
+                <li><a href="https://facebook.com/teknothon.dcs"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/sahilqaiser"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com/teknothon2018"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
           <!-- //.footer-social -->
