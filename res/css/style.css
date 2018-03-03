@@ -467,8 +467,24 @@
 #register textarea {
   height: 120px;
 }
+.button-success {
+  color: white;
+  border-radius: 4px;
+  align-self:right;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #1e8fe6; /* this is a blue */
+}
+.text div{
+  color:#1e8fe6;
+}
+.form_row div{
+  position: relative;
+  top: 20%;
+  left: 20%;
+  max-width: 60%;
 
-
+  
+}
 
 /*
   Section - Contact
