@@ -752,17 +752,15 @@
 
 .sizeAdjust div{
   align-items: center;
-  top: 20%;
-  left: 20%;
-  max-width: 60%;
-  margin-left: 20%;
+  max-width: 75%;
+  margin-left: 15%;
 }
 .sizeAdjustModal div{
   align-items: center;
   top: 10%;
   left: 10%;
-  max-width: 80%;
-  margin-left: 20%;
+  max-width: 90%;
+  margin-left: -5%;
 }
 .sizeAdjustModal img{
   max-width:280px;
@@ -771,7 +769,7 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .sizeAdjustModal div {
-      max-width: 90%;
+      max-width: 100%;
       padding-left: 5%;
       padding-right: 5%;
   }
@@ -784,10 +782,9 @@
   .sizeAdjust .btn{
     width: 160px;
     max-width: 400px;
-    margin-left: 0%;
   }
   .fill-container div{
-    margin-left: 0%;
+    margin-left: -10%;
   } 
 }
 .btn button{
