@@ -729,11 +729,16 @@
 }
 
 .cardtype input{
-                width: 12%;
+                width: 20%;
             }
 .cardtype img{
-                width: 25%;
+                max-width: 300px;
+                width: 40%;
             }
+.cardtype label{
+    align-content: center;
+    
+}
 
 .sizeAdjust form{
   width:75%;

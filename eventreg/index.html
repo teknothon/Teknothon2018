@@ -208,16 +208,19 @@ Page Create By Basarat Ali (github.com/joker-r)
                 </span>
               </div>
             </div>
+          </div>
+          <div class="adjustSizeModal">
               <label id="amountLabel">Total Amount: 0</label><br><label id="eventLabel1" name="eventLabel">No Events Selected</label>
               <p class="text-muted">Make Sure To Pay The Exact Amount</p>
               <label for="email">Payment Mode:</label><br>
-              <div class="cardtype form_row">
-             <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img src="paytm.png"><br>
-             <label class="labelFormat">Or Pay To +91-8825030679</label>
-		      </div>	
-          <div id="ifYes" style="visibility:hidden">
-				    <img src="payment.png" width="60%"><br>
-            <b>Transaction ID:</b> <input required type='text' id='yes' name='txnID'><br>
+              <div class="form_row" align-contents="center">
+             <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img max-width="400px" src="paytm.png"><br>
+             <h4 align="center">SCAN Or Pay To +91-8920321474</h4>
+		      	
+          <div id="ifYes" align="center" style="visibility:hidden">
+				    <img src="payment.png"><br>
+            <b>Transaction ID:</b><input required type='text' placeholder="xxxxxxxxxxxx" id='yes' name='txnID'><br>
+          </div>
           </div>
           <fieldset align="right">
             <button class="button-success pure-button button-xlarge">
