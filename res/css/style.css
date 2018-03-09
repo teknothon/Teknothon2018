@@ -739,6 +739,10 @@
     align-content: center;
 
 }
+.fill-container div{
+  align-content: center;
+  width: 100%;
+} 
 
 .sizeAdjust form{
   width:75%;
@@ -776,7 +780,14 @@
   .sizeAdjustModal h4{
     max-width: 100%;
   }
-  
+  .sizeAdjust .btn{
+    width: 160px;
+    max-width: 400px;
+    margin-left: 0%;
+  }
+  .fill-container div{
+    margin-left: 0%;
+  } 
 }
 .btn button{
   width: 100%;
