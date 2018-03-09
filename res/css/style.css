@@ -747,3 +747,9 @@
   max-width: 60%;
   margin-left: 20%;
 }
+.sizeAdjustModal div{
+  align-items: center;
+  top: 10%;
+  left: 10%;
+  max-width: 80%;
+}

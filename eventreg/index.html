@@ -157,11 +157,19 @@ Page Create By Basarat Ali (github.com/joker-r)
                       <label for="mobile">Mobile No:<br></label>
                       <input id="mobile" name="mobile" required placeholder="xxxxxxxxxx"/>
                    </fieldset>
+                   <style>
+                     .fill-container div{
+                        margin-left: 0%;
+                     }
+                     .btn button{
+                       align-items: center;
+                     }
+                   </style>
              <!-- <label for="sel1">Select Event :</label> -->
-             <div class="container">
-             <div class="Bg-gray-light no-padding-rl padding-6 position-relative text-center">
+             <div class="container fill-container sizeAdjustModal">
+             <div class="bg-gray-light no-padding-rl padding-6 position-relative text-center">
                 <span class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#EventsModal"><span class="glyphicon glyphicon-exclamation-sign"></span> Select Events</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#EventsModal"><span align="right" class="glyphicon glyphicon-exclamation-sign"></span> Select Events</button>
                     <!-- Modal -->
                     <div class="modal fade" id="EventsModal" role="dialog">
                       <div class="modal-dialog modal-lg">
