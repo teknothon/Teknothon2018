@@ -65,6 +65,11 @@ Page Create By Basarat Ali (github.com/joker-r)
   <!--[if lt IE 8]>
   <script src="../res/js/modernizr.min.js"></script>
   <![endif]-->
+  <style>
+      .fill-container div{
+         margin-left: 0%;
+      }
+    </style>
 </head>
 
 <body id="page-top">
@@ -157,14 +162,8 @@ Page Create By Basarat Ali (github.com/joker-r)
                       <label for="mobile">Mobile No:<br></label>
                       <input id="mobile" name="mobile" required placeholder="xxxxxxxxxx"/>
                    </fieldset>
-                   <style>
-                     .fill-container div{
-                        margin-left: 0%;
-                     }
-                     .labelFormat label{
-                       align-content: center;
-                     }
-                   </style>
+                   </div>
+              <div class="row">
              <!-- <label for="sel1">Select Event :</label> -->
              <div class="container fill-container sizeAdjust">
              <div class="bg-gray-light no-padding-rl sizeAdjustModal position-relative text-center">
@@ -208,17 +207,17 @@ Page Create By Basarat Ali (github.com/joker-r)
                 </span>
               </div>
             </div>
-          </div>
           <div class="adjustSizeModal">
               <label id="amountLabel">Total Amount: 0</label><br><label id="eventLabel1" name="eventLabel">No Events Selected</label>
               <p class="text-muted">Make Sure To Pay The Exact Amount</p>
               <label for="email">Payment Mode:</label><br>
-              <div class="form_row" align-contents="center">
-             <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img max-width="400px" src="paytm.png"><br>
-          </div>
-          <div>	
-          <div id="ifYes" align="center" style="visibility:hidden">
-            <h4 align="center">SCAN Or Pay To<br>+91-8920321474</h4>
+              <div class="row" align-contents="center">
+             <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img src="paytm.png"><br>
+              </div>
+              </div>
+          <div class="row adjustSizeModal">
+            <div id="ifYes" align="center" style="visibility:hidden">
+            <h4 style="max-width:100%" align="center"><br>SCAN Or Pay To<br>+91-8920321474</h4>
 				    <img src="payment.png"><br>
             <b>Transaction ID:</b><input required type='text' placeholder="xxxxxxxxxxxx" id='yes' name='txnID'><br>
               <fieldset align="right">

@@ -759,6 +759,25 @@
   max-width: 80%;
   margin-left: 20%;
 }
+.sizeAdjustModal img{
+  max-width:280px;
+  align-self:center
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .sizeAdjustModal div {
+      max-width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  .sizeAdjustModal img{
+    max-width: 120px;
+  }
+  .sizeAdjustModal h4{
+    max-width: 100%;
+  }
+  
+}
 .btn button{
   width: 100%;
 }
