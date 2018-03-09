@@ -215,17 +215,18 @@ Page Create By Basarat Ali (github.com/joker-r)
               <label for="email">Payment Mode:</label><br>
               <div class="form_row" align-contents="center">
              <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img max-width="400px" src="paytm.png"><br>
-             <h4 align="center">SCAN Or Pay To +91-8920321474</h4>
-		      	
+          </div>
+          <div>	
           <div id="ifYes" align="center" style="visibility:hidden">
+            <h4 align="center">SCAN Or Pay To +91-8920321474</h4>
 				    <img src="payment.png"><br>
             <b>Transaction ID:</b><input required type='text' placeholder="xxxxxxxxxxxx" id='yes' name='txnID'><br>
+              <fieldset align="right">
+                <button class="button-success pure-button button-xlarge">
+                <i class="fa fa-paper-plane"></i>&nbsp;Submit</button>
+              </fieldset>
           </div>
           </div>
-          <fieldset align="right">
-            <button class="button-success pure-button button-xlarge">
-            <i class="fa fa-paper-plane"></i>&nbsp;Submit</button>
-          </fieldset>
           <input name="eventLabel" id="eventLabel" placeholder="No Events Selected" style="visibility:hidden"/>
           <input name="eventBill" id="eventBill" placeholder="0" style="visibility:hidden"/>
         </div>

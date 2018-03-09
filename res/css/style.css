@@ -737,7 +737,7 @@
             }
 .cardtype label{
     align-content: center;
-    
+
 }
 
 .sizeAdjust form{
@@ -758,4 +758,7 @@
   left: 10%;
   max-width: 80%;
   margin-left: 20%;
+}
+.btn button{
+  width: 100%;
 }
