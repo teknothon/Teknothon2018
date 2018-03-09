@@ -740,6 +740,7 @@
 
 }
 .fill-container div{
+  margin-left: 0%;
   align-content: center;
   width: 100%;
 } 
