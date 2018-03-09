@@ -18,6 +18,9 @@ Page Create By Basarat Ali (github.com/joker-r)
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Title, icon, description and keywords -->
   <title>EVENT Registration | TEKNOTHON 2018</title>
@@ -118,17 +121,11 @@ Page Create By Basarat Ali (github.com/joker-r)
         <!-- //.col-md-12 -->
       </div>
       <!-- //.row -->
-
-      
-
       <span class="bg-gray-light-2 separator-line-full"></span>
-
       <div class="row margin-5 no-margin-rl no-margin-bottom">
         <!-- //.col-md-5 -->
-
-        <div class="form_row" width="60%">
+        <div width="60%">
           <br>
-          
           <div class="row" align="left">
               <div class="text" align="center">
                 <h2 class="font-family-alt font-weight-700 sm-title-large title-extra-large-2 text-gray-dark-2">
@@ -137,85 +134,99 @@ Page Create By Basarat Ali (github.com/joker-r)
             <!-- Google Spreadsheet START HERE -->
             <!-- Style The Contact Form How Ever You Prefer -->
             <link rel="stylesheet" href="../res/style.css">
-            <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="teknothon.dcs@gmail.com"
+            <form id="gform" method="POST" class="sizeAdjust" data-email="teknothon.dcs@gmail.com"
             action="https://script.google.com/macros/s/AKfycbxOkcuBL-08vxmUKtv3TGeg2H1WMyDvATnxVNpRbHg1l4Ehqb4/exec">
               <!-- change the form action to your script url -->
-
-              <fieldset class="pure-group">
-                <label for="name">Name: </label><br>
-                <input id="name" name="name" placeholder="Individual name /Group Name " />
-              </fieldset>
-
-              <fieldset class="pure-group">
-                <label for="email">Email Address:</label><br>
-                <input id="email" name="email" type="email" value=""
-                required placeholder="name@email.com"/>
-                <span id="email-invalid" style="display:none">
-                  Must be a valid email address</span>
-              </fieldset>
-<fieldset class="pure-group">
-                <label for="college">College/University:</label><br>
-                <input id="college" name="college"  required placeholder="college name or university"/>
-             </fieldset>
-			 <fieldset class="pure-group">
-                <label for="mobile">Mobile No:</label><br>
-                <input id="mobile" name="mobile"  required placeholder="9999999999"/>
-             </fieldset>
-      <label for="sel1">Select Event :</label>
-      <select class="form-control" id="sel1">
-        	  
-        <option>QUIZICAL</option>
-        <option>GAME OF CODING</option>
-        <option>LAN MULTIPLAYER GAMING</option>
-        <option>BUGVILLA BUG-HUNTING</option>
-		 <option>WEBSITE DESIGN</option>
-		  <option>WORKSHOP SESSIONS</option>
-		  <option>FEEL THE BEAT-DANCE COMPETITION</option>
-		 <option>SCHOOL OF ROCK -BATTLE OF BANDS</option>
-		  <option>EMBER-THE FASHION SHOW</option>
-		  <option>SARGAM-THE SINGING COMPETITION</option>
-		  <option>PIXELS-THE PHOTOGRAPHY COMPETITION</option>
-		  <option>TEKTION-THE MOVIEMAKING COMPETITION</option>
-		  <option>TPL-CRICKET TOURNAMENT</option>
-		  <option>TREASURE HUNT</option>
-		  <option>COUCH-POTATO</option>
-		  <option>NUKKAD NAATAK</option>
-		  <option>FACE PAINTING</option>
-		  <option>CHESSMATE </option>
-		
-		  
-      </select>
-	  
-	  <label for="amount">Total Amount: 50</label><br>
-	  <p class="text-muted">Make Sure To Pay The Exact Amount</p>
-	  
+              <div class="row">
+                  <fieldset class="pure-group">
+                      <label for="name">Name: </label><br>
+                      <input id="name" name="name" placeholder="Individual name / Group Name " />
+                    </fieldset>
+                    <fieldset class="pure-group">
+                      <label for="email">Email Address:</label><br>
+                      <input id="email" name="email" type="email" value=""
+                      required placeholder="name@email.com"/>
+                      <span id="email-invalid" style="display:none">
+                        Must be a valid email address</span>
+                    </fieldset>
+                    <fieldset class="pure-group">
+                      <label for="college">College/University:</label><br>
+                      <input id="college" name="college"  required placeholder="college name or university"/>
+                    </fieldset>
+                    <fieldset class="pure-group">
+                      <label for="mobile">Mobile No:<br></label>
+                      <input id="mobile" name="mobile" required placeholder="xxxxxxxxxx"/>
+                   </fieldset>
+             <!-- <label for="sel1">Select Event :</label> -->
+             <div class="container">
+             <div class="Bg-gray-light no-padding-rl padding-6 position-relative text-center">
+                <span class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#EventsModal"><span class="glyphicon glyphicon-exclamation-sign"></span> Select Events</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="EventsModal" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Select Events</h4>
+                          </div>
+                          <div class="modal-body">
+                                  <label><input type="checkbox" checked class="event_checks" value=50 name="Quizical"/>QUIZICAL</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="GAME OF CODING"/>GAME OF CODING</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="LAN MULTIPLAYER GAMING"/>LAN MULTIPLAYER GAMING</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=40 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS"/>WORKSHOP SESSIONS</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="FEEL THE BEAT-DANCE COMPETITION"/>FEEL THE BEAT-DANCE COMPETITION</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="SCHOOL OF ROCK - BATTLE OF BANDS"/>SCHOOL OF ROCK - BATTLE OF BANDS</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="SARGAM-THE SINGING COMPETITION"/>SARGAM-THE SINGING COMPETITION</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="PIXELS-THE PHOTOGRAPHY COMPETITION"/>PIXELS-THE PHOTOGRAPHY COMPETITION</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="TEKTION-THE MOVIEMAKING COMPETITION"/>TEKTION-THE MOVIEMAKING COMPETITION</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="COUCH-POTATO"/>COUCH-POTATO</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="FACE PAINTING"/>FACE PAINTING</label><br>
+                                  <label><input type="checkbox" class="event_checks" value=50 name="CHESSMATE"/>CHESSMATE</label><br>               
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="javascript:selectEvents();" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </span>
+              </div>
+            </div>
+              <label id="amountLabel">Total Amount: 0</label><br><label id="eventLabel1" name="eventLabel">No Events Selected</label>
+              <p class="text-muted">Make Sure To Pay The Exact Amount</p>
               <label for="email">Payment Mode:</label><br>
-<div class="cardtype">
-                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img src="paytm.png"><br>
-		</div>	
-                  <div id="ifYes" style="visibility:hidden">
-				  <img src="payment.png" width="80%"><br>
-				  
-        <b>Transaction ID:</b> <input type='text' id='yes' name='yes'><br>
-                
-
-</div>
-
-              <fieldset align="right">
-                <button class="button-success pure-button button-xlarge">
-                  <i class="fa fa-paper-plane"></i>&nbsp;Submit</button>
-              </fieldset>
-            </form>
-
+              <div class="cardtype form_row">
+             <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><img src="paytm.png"><br>
+		      </div>	
+          <div id="ifYes" style="visibility:hidden">
+				    <img src="payment.png" width="60%"><br>
+            <b>Transaction ID:</b> <input required type='text' id='yes' name='txnID'><br>
+          </div>
+          <fieldset align="right">
+            <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Submit</button>
+          </fieldset>
+          <input name="eventLabel" id="eventLabel" placeholder="No Events Selected" style="visibility:hidden"/>
+          <input name="eventBill" id="eventBill" placeholder="0" style="visibility:hidden"/>
+        </div>
+      </form>
             <!-- Customise the Thankyou Message People See when they submit the form: -->
             <div style="display:none;" id="thankyou_message">
-              <h2><em>Thanks</em> for contacting us!
-                We will get back to you soon!</h2>
+              <h2><em>Thank You</em><br>
+                We Have Recorded Ur Details and Payment. Please Be On Time on 26,27 March</h2>
             </div>
 
             <!-- Submit the Form to Google Using "AJAX" -->
             <script data-cfasync="false" type="text/javascript"
-            src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+            src="../res/js/form-submission-handler.js"></script>
             <!-- <script data-cfasync="false" type="text/javascript"
             src="/form-submission-handler.js"></script> -->
           <!-- END -->
@@ -228,9 +239,7 @@ Page Create By Basarat Ali (github.com/joker-r)
               <!-- //.container -->
             </section>
             <!-- //Section - Registration end -->
-            <span class="bg-gray-light-2 separator-line-full"></span>
-
-
+        <span class="bg-gray-light-2 separator-line-full"></span>
   <!-- Section - Event banner start -->
   <section id="event-banner" class="bg-white pull-up">
     <div class="container">

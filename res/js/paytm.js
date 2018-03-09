@@ -3,5 +3,4 @@ function yesnoCheck() {
         document.getElementById('ifYes').style.visibility = 'visible';
     }
     else document.getElementById('ifYes').style.visibility = 'hidden';
-
 }

@@ -734,3 +734,16 @@
 .cardtype img{
                 width: 25%;
             }
+
+.sizeAdjust form{
+  width:75%;
+  max-width: 400px;
+}
+
+.sizeAdjust div{
+  align-items: center;
+  top: 20%;
+  left: 20%;
+  max-width: 60%;
+  margin-left: 20%;
+}
