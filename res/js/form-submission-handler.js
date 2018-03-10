@@ -13,10 +13,10 @@ function validateHuman(honeypot) {
   }
 }
 //Form Handling With Events
-function selectEvents() {
-  var checks = document.getElementsByClassName('event_checks');
+var checks = document.getElementsByClassName('event_checks');
   var strEvents = "";
   var amountToPay=0;
+function selectEvents() {
   for(i=0; i<18; i++)
   {
       switch(checks[i].checked)
@@ -30,27 +30,20 @@ function selectEvents() {
               break;
       }
   }
-  strEvents.slice(0,-4);
-  //window.alert(amountToPay);
+  //strEvents.slice(0,-2);
+  window.alert(amountToPay);
   document.getElementById('amountLabel').innerHTML="Total Amount: "+amountToPay;
   document.getElementById('eventLabel').value = strEvents;
   document.getElementById('eventBill').value = amountToPay;
   document.getElementById('eventLabel1').innerHTML="Events Selected : "+strEvents;
 }
-function getEventName(id){
-  switch(id){
-    case 1:
-      return "Quizical";
-      break;
-    case 2:
-      return "Game of Codes";
-      break;
-    default:
-      return "";
-      break;
-  }
 
+//Send Transaction data to Teknothon
+function sendData()
+{
+   document.getElementById('modalLabel').innerHTML = "To Pay : "+amountToPay;
 }
+
 // get all data in form and return object
 function getFormData() {
   var form = document.getElementById("gform");
