@@ -2,7 +2,6 @@
 Teknothon 2018 
 
 Event website by @SahilQaiser, Adapted from TEDxJMI project by Syed Faheel Ahmad (github.com/faheel)
-Page Create By Basarat Ali (github.com/joker-r)
 -->
 
 
@@ -24,7 +23,7 @@ Page Create By Basarat Ali (github.com/joker-r)
 
   <!-- Title, icon, description and keywords -->
   <title>EVENT Registration | TEKNOTHON 2018</title>
-  <link rel="shortcut icon" href="res/images/favicon.ico">
+  <link rel="shortcut icon" href="../res/images/favicon.ico">
   <meta name="description" content="TEKNOTHON - A Techno-Cultural event Organized by Department of Computer Science JMI. This March, at Jamia Millia Islamia.">
   <meta name="keywords" content="Teknothon, JMI, Jamia Millia Islamia, New Delhi, event">
 
@@ -105,188 +104,232 @@ Page Create By Basarat Ali (github.com/joker-r)
           <!-- //.container -->
         </nav>
         <!-- //Navigation End -->
-        <!-- FOR<M STart -->
-                <body class="#page-top"><br><br><br>
+        <!-- FORM STart -->
+                <section id="registration">
                     <div class="py-5">
                       <div class="container">
                         <div class="row">
                           <div class="text-center col-md-7 mx-auto">
-                            <img class="img-fluid d-block rounded mx-auto" src="../../../Downloads/logo with name.png" width="50%" height="50%">
+                            <img class="img-fluid d-block rounded mx-auto" src="../res/images/teknothon-logo.png" width="50%" height="50%">
                             <h1 class="text-success text-uppercase"><b>Event Registration</b></h1>
                             <p class="lead">Register for your favourite event(s) before the seats run out. Theres a limit for every event.&nbsp;</p>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <!-- Submit the Form to Google Using "AJAX" -->
+                    <script data-cfasync="false" type="text/javascript"
+                    src="../res/js/form-submission-handler.js"></script>
+                    <!-- <script data-cfasync="false" type="text/javascript"
+                    src="/form-submission-handler.js"></script> -->
                     <div class="">
                       <div class="container">
                         <div class="row">
                           <div class="col-md-8 order-md-1">
                             <h4 class="mb-3">Enter Details</h4>
-                            <form id="gform" method="POST" class="needsvalidation" data-email="sqas.sq1@gmail.com" 
-                            action="https://script.google.com/macros/s/AKfycbysvo38h4R75NcnyT_IZC0UBtXja-OWsma9LqPmgR8shsYSQihb/exec">
-                              <div class="row">
+                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" 
+                            action="https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec">
+                            <div class="row">
                                 <div class="col-md-6 mb-3"> <label for="name">Name *</label>
-                                  <input type="text" class="form-control" name="name" id="name" placeholder="" value="" required="">
-                                  <div class="invalid-feedback"> Valid Participant Name is required. </div>
+                                    <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
                                 </div>
-                                <div class="col-md-6 mb-3"> <label for="courseName">Course Name *</label>
-                                  <input required type="text" class="form-control" placeholder="" value="" required="" name="courseName" id="courseName">
-                                  <div class="invalid-feedback"> Valid Course Name is required. </div>
+                                <div class="col-md-6 mb-3"> <label for="courseName">Course Name</label>
+                                   <input required type="text" class="form-control" placeholder="Course" name="courseName" id="courseName">
                                 </div>
-                              </div>
-                              <div class="mb-3"> <label for="College">College/University *</label>
-                                <input type="text" class="form-control" placeholder="Jamia Millia Islamia" required="" name="College" id="College">
-                                <div class="invalid-feedback"> Please enter your College Name here. </div>
-                              </div>
-                              <div class="mb-3"> <label for="Phone">Phone Number *</label>
+                            </div>
+                            <div class="mb-3"> <label for="College">College/University *</label>
+                                <input type="text" class="form-control" required placeholder="College / University / School" name="College" id="College">
+                            </div>
+                            <div class="mb-3"> <label for="Phone">Phone Number *</label>
                                 <div class="input-group">
-                                  <div class="input-group-prepend"> <span class="input-group-text">+91</span> </div>
-                                  <input type="text" class="form-control" required="" name="Phone" id="Phone" placeholder="xxxx xxx xxx">
-                                  <div class="invalid-feedback" style="width: 100%;"> Your Phone Number is required. </div>
+                                    <div class="input-group-prepend"><span class="input-group-text">+91</span> </div>
+                                    <input type="text" required class="form-control" name="Phone" id="Phone" placeholder="xxxx xxx xxx">
                                 </div>
-                              </div>
-                              <div class="mb-3"> <label for="Email">Email *</label>
-                                <input type="email" class="form-control" name="Email" id="Email" placeholder="you@example.com">
-                                <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-12 mb-3 mx-auto"> <label for="gender">Gender *</label> <select class="custom-select d-block w-100" style="font-size: 1.2rem;" id="events" required="">
+                            </div>
+                            <div class="mb-3"> <label for="Email">Email *</label>
+                                <input type="email" class="form-control" required name="email" id="email" placeholder="you@example.com">
+                                <span id="email-invalid" style="display:none">Must be a valid email address</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-3 mx-auto"> <label for="gender">Gender</label> <select class="custom-select d-block w-100" name="Gender" style="font-size: 1.2rem;" id="events">
                                     <option value="">Choose...</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="nogender">Wont Say</option>
-                                  </select>
-                                  <div class="invalid-feedback"> Please select a valid country. </div>
+                                    </select>
                                 </div>
-                              </div>
-                             <!-- <a class="btn btn-primary btn-block btn-lg w-75 mx-auto px-5" href="#" id="btn_selectEvents">Select The Events</a>
-                             -->
-                              <!--Modal Start -->
-                              <div class="fill-container">
+                            </div>
+                                <!-- <a class="btn btn-primary btn-block btn-lg w-75 mx-auto px-5" href="#" id="btn_selectEvents">Select The Events</a>
+                                -->
+                            <!--Modal Start -->
+                            <div class="fill-container">
                                     <div class="no-padding-rl position-relative text-center">
-                                       <button class="btn btn-primary btn-block btn-lg w-50 mx-auto text-center" data-toggle="modal" data-target="#EventsModal"><span align="right" class="fa fa-angle-double-up"></span>  Select Events  <span class="fa fa-angle-double-up"></span></button>
+                                        <button type="button" name="button" class="btn btn-primary btn-block btn-lg w-50 mx-auto text-center" onclick="javascript:selectEvents;" data-toggle="modal" data-target="#EventsModal"><span align="right" class="fa fa-angle-double-up"></span>  Select Events  <span class="fa fa-angle-double-up"></span></button>
                                         <span class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
-                                         <!-- Modal -->
-                                           <div class="modal fade sizeAdjustModal" id="EventsModal" role="dialog">
-                                             <div class="modal-dialog modal-lg">
-                                               <!-- Modal content-->
-                                               <div class="modal-content">
-                                                 <div class="modal-header">
-                                                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                   <h4 class="modal-title">Select Events</h4>
-                                                 </div>
-                                                 <div class="modal-body">
-                                                         <label><input type="checkbox" checked class="event_checks" value=50 name="Quizical"/>QUIZICAL</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="GAME OF CODING"/>GAME OF CODING</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="LAN MULTIPLAYER GAMING"/>LAN MULTIPLAYER GAMING</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=40 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS"/>WORKSHOP SESSIONS</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="FEEL THE BEAT-DANCE COMPETITION"/>FEEL THE BEAT-DANCE COMPETITION</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="SCHOOL OF ROCK - BATTLE OF BANDS"/>SCHOOL OF ROCK - BATTLE OF BANDS</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="SARGAM-THE SINGING COMPETITION"/>SARGAM-THE SINGING COMPETITION</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="PIXELS-THE PHOTOGRAPHY COMPETITION"/>PIXELS-THE PHOTOGRAPHY COMPETITION</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="TEKTION-THE MOVIEMAKING COMPETITION"/>TEKTION-THE MOVIEMAKING COMPETITION</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="COUCH-POTATO"/>COUCH-POTATO</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="FACE PAINTING"/>FACE PAINTING</label><br>
-                                                         <label><input type="checkbox" class="event_checks" value=50 name="CHESSMATE"/>CHESSMATE</label><br>               
-                                                 </div>
-                                                 <div class="modal-footer">
-                                                   <button type="button" class="btn btn-default" onclick="javascript:selectEvents();" data-dismiss="modal">Save</button>
-                                                 </div>
-                                               </div>
-                                             </div>
-                                           </div>
-                                       </span>
-                                     </div>
-                                   </div>
-                                   <div class="mb-3"> <label for="eventLabel">Event Details</label>
-                                    <input type="text" class="form-control" placeholder="NoEvents Selected.. Select One" name="eventLabel" disabled id="eventLabel">
-                                  </div>
-                              <br><br>
-                              <h2 class="mb-3"><b>Payment</b></h2>
-                              <div class="row">
-                                    <div class="d-block my-3" style="margin-left:5%; width:45%">
-                                        <div class="custom-control custom-radio">
-                                        <input id="paytm" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="modal" data-target="#PayModal" required="" value="on"> <label class="custom-control-label" for="paytm">PayTM</label> </div>
-                                        <span class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
-                                         <!-- Modal -->
-                                           <div class="modal fade sizeAdjustModal" id="PayModal" role="dialog">
-                                             <div class="modal-dialog modal-lg">
-                                               <!-- Modal content-->
-                                               <div class="modal-content">
-                                                 <div class="modal-header">
-                                                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                   <h4 class="modal-title" style="text-align:center;">Scan Through Paytm</h4>
-                                                 </div>
-                                                 <div class="modal-body">
-                                                        <h4 class="modal-title" style="font-size:100%; text-align: center;">OR Pay to +91-8920321474</h4>
-                                                         <img src="payment.png">
-                                                         <div class="mb-3"> <label id="modalLabel" name="modalLabel">To Pay : 0</label>
-                                                            <input type="text" class="form-control" placeholder="Transaction id" name="transaction" id="transaction">
-                                                          </div>            
-                                                 </div>
-                                                 <div class="modal-footer">
-                                                   <button type="button" class="btn btn-default" onclick="javascript:sendData();" data-dismiss="modal">Send Details to Teknothon</button>
-                                                 </div>
-                                               </div>
-                                             </div>
-                                           </div>
-                                       </span>
-                                    
+                                            <!-- Modal -->
+                                            <div class="modal fade sizeAdjustModal" id="EventsModal" role="dialog">
+                                                <div class="modal-dialog modal-lg">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <button class="close" name="button" type="button" onclick="javascript:selectEvents();" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Select Events</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="Quizical"/>QUIZICAL</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="GAME OF CODING"/>GAME OF CODING</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="LAN MULTIPLAYER GAMING"/>LAN MULTIPLAYER GAMING</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=40 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS"/>WORKSHOP SESSIONS</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="FEEL THE BEAT-DANCE COMPETITION"/>FEEL THE BEAT-DANCE COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="SCHOOL OF ROCK - BATTLE OF BANDS"/>SCHOOL OF ROCK - BATTLE OF BANDS</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="SARGAM-THE SINGING COMPETITION"/>SARGAM-THE SINGING COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="PIXELS-THE PHOTOGRAPHY COMPETITION"/>PIXELS-THE PHOTOGRAPHY COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="TEKTION-THE MOVIEMAKING COMPETITION"/>TEKTION-THE MOVIEMAKING COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="COUCH-POTATO"/>COUCH-POTATO</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="FACE PAINTING"/>FACE PAINTING</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="CHESSMATE"/>CHESSMATE</label><br>               
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" name="button" class="btn btn-default" onclick="javascript:selectEvents();" data-dismiss="modal">Save</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </span>
                                     </div>
-
-                                    <div class="d-block my-3" style="margin-right:5%; width:45%">
-                                            <div class="custom-control custom-radio">
-                                            <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" required="" value="on"> <label class="custom-control-label" for="cash">Cash (On Event Day)</label> </div>
-                                        </div>    
-                              </div>
-
-                              <hr class="mb-4">
-                              <button class="btn btn-primary btn-lg btn-block w-50 text-center mx-auto" type="submit">Continue to Checkout</button>
-                            </form>
+                            </div>
+                            <div class="mb-3"> <label for="eventList">Event Details</label>
+                                    <textarea class="form-control" placeholder="Unselect ALL events if U only want to attend the fest.. Free Of Cost" name="eventList" disabled id="eventList"></textarea>
+                            </div>
+                            <br><br>
+                            <h2 class="mb-3"><b>Payment</b></h2>
+                            <div class="row">
+                                <div class="d-block my-3" style="margin-left:5%; width:45%">
+                                    <div class="custom-control custom-radio">
+                                      <input id="paytmRadio" name="paymentMethod" type="radio" class="custom-control-input">
+                                      <label class="custom-control-label" for="paytmRadio">PayTM</label>
+                                    </div>
+                                </div>
+                                <!--<script type="text/javascript">
+                                  $('button[type!=submit]').click(function(){
+                                      // code to cancel changes
+                                      return false;
+                                  });
+                                </script>-->
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#paytmRadio").click(function(){
+                                            $('#cash_id').hide();
+                                            $('#paytm_id').show();
+                                            $('#transaction').attr("required","required");
+                                            //$('#submitCash').attr("disabled","disabled");
+                                            //$('#submitPaytm').removeAttr("disabled");
+                                        });
+                                        $("#cashRadio").click(function(){
+                                            $('#paytm_id').hide();
+                                            $('#cash_id').show();
+                                            $('#transaction').removeAttr("required");    
+                                            //$('#submitCash').removeAttr("disabled");
+                                            //$('#submitPaytm').attr("disabled","disabled");
+                                        });
+                                    });
+                                </script>
+                                <div class="d-block my-3" style="margin-right:5%; width:45%">
+                                    <div class="custom-control custom-radio">
+                                    <input id="cashRadio" name="paymentMethod" type="radio" class="custom-control-input">
+                                    <label class="custom-control-label" for="cashRadio">Cash (On Event Day)</label> </div>
+                                </div> 
+                                <span style="margin-left:40%;width:15%;" class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
+                                <!-- Modal -->      
+                                <div class="modal fade sizeAdjustModal" id="modal_id" role="dialog">
+                                    <div class="modal-dialog modal-lg" name="paytm_id" id="paytm_id">
+                                    <!-- Modal content-->
+                                      <div class="modal-content" id="paytm">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" onclick="javascript:sendData();" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title" style="text-align:center;">Scan Through Paytm</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                                <h4 class="modal-title" style="font-size:100%; text-align: center;">OR Pay to +91-8920321474</h4>
+                                                <img src="payment.png">
+                                                <div class="mb-3"> <label id="modalLabel" name="modalLabel">To Pay : 0</label>
+                                                    <input type="text" class="form-control" placeholder="Transaction id" required name="transaction" id="transaction">
+                                                    </div>            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary submitBtn" onclick="javascript:sendData();">SUBMIT</button>
+                                            <!-- <input type="submit" value="Proceed" class="button-success btn btn-default" data-dismiss="modal" onclick="javascript:sendData();">
+                                           <button type="submit" id="paytmSubmit" class="button-success btn btn-default" data-dismiss="modal" onclick="javascript:sendData();">Close !</button>
+                                           </div> -->
+                                      </div>
+                                    </div>
+                                    <div class="modal-dialog modal-lg" name="cash_id" id="cash_id">
+                                        <div class="modal-content" id="modal_cash">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" onclick="javascript:sendData();" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title" style="text-align:center;">Pay Cash</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                    <h4 class="modal-title" style="font-size:100%; text-align: center;">You have been Provisionally Registered for the Events, Kindly Pay to Your Registration Fee at Registration DEsk on March 26 2018. And Avoid your Registration getting Canceled</h4>
+                                                    <br>
+                                                    <div class="mb-3"> <label id="modalLabelcash" name="modalLabelcash">To Pay : 0</label>
+                                                    </div>            
+                                            </div>
+                                            <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn btn-primary submitBtn" onclick="javascript:sendData();">SUBMIT</button>
+                                                    <!-- <input type="submit" value="Proceed" class="button-success btn btn-default">
+                                                    <button type="submit" id="cashSubmit" class="button-success btn btn-default" onclick="javascript:sendData();" data-dismiss="modal">Close !</button> -->
+                                            </div>
+                                        
+                                         </div>
+                                    </div>  
+                                  </div>
+                                    
+                                </span>   
+                            </div>
+                            
+                            <button type="button" class="btn button-success pure-button button-xlarge btn-primary btn-block w-100 text-center mx-auto" onclick="javascript:sendData();" id="getModal" data-toggle="modal" 
+                            data-target="#modal_id"><i class="fa fa-paper-plane"></i>&nbsp;Pay</button><br>
+                        </form>
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                            <div style="display:none;" id="thankyou_message">
+                                    <h2><em>Thank You</em><br>
+                                    We Have Recorded Ur Details and Payment. Please Be On Time on 26,27 March</h2>
+                            </div>
+                            <!-- END -->
+                            
                           </div>
-                          <div class="col-md-4 order-md-2">
-                            <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Your cart</b></span><span class="badge badge-secondary badge-pill">3</span> </h4>
+                          
+                        </div>
+                        <div class="col-md-4 order-md-2">
+                            <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Readme !!</b></span><span class="badge badge-secondary badge-pill">3</span> </h4>
                             <ul class="list-group">
-                            <div style="display:none;">
+                            <div>
                               <li class="list-group-item d-flex align-items-end justify-content-between">
-                                  <h6 class="my-0"><b>Product name</b></h6>
-                                  <span class="text-muted">$12</span> </li></div>
+                                  <h6 class="my-0"><b>Event Rules</b></h6>
                               <li class="list-group-item d-flex justify-content-between">
                                 <div>
-                                  <h6 class="my-0"><b>Second product</b></h6> <small class="text-muted">Brief description</small> </div>
-                                  <span class="text-muted">$8</span> </li>
+                                  <h6 class="my-0"><b>Please present Yourself before start of every Event (Competition)</b></h6> <small class="text-muted">Brief description</small> </div>
+                                  <span class="text-muted">Important</span> </li>
                               <li class="list-group-item d-flex justify-content-between">
                                 <div>
-                                  <h6 class="my-0"><b>Third item</b></h6> <small class="text-muted">Brief description</small> </div>
-                                  <span class="text-muted">$5</span> </li>
-                              <li class="list-group-item d-flex justify-content-between"> <span>Total (USD)</span> <b>$20</b> </li>
+                                  <h6 class="my-0"><b>Rule 2</b></h6> <small class="text-muted">Brief description</small> </div>
+                                  <span class="text-muted">Important</span> </li>
+                              <li class="list-group-item d-flex justify-content-between"> <span>Last Rule</span> <b>HAve FUN!</b> </li>
                             </ul>
                           </div>
-                        </div>
                       </div>
                     </div>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                    <!-- Customise the Thankyou Message People See when they submit the form: -->
-                  <div style="display:none;" id="thankyou_message">
-                  <h2><em>Thank You</em><br>
-                    We Have Recorded Ur Details and Payment. Please Be On Time on 26,27 March</h2>
-                  </div>
-                  
-                  <!-- Submit the Form to Google Using "AJAX" -->
-                  <script data-cfasync="false" type="text/javascript"
-                  src="../res/js/form-submission-handler.js"></script>
-                  <!-- <script data-cfasync="false" type="text/javascript"
-                  src="/form-submission-handler.js"></script> -->
-                  <!-- END -->
                   <span class="bg-gray-light-2 separator-line-full"></span>
-        
+                </section>
 
 
 

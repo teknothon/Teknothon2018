@@ -12,37 +12,6 @@ function validateHuman(honeypot) {
     console.log("Welcome Human!");
   }
 }
-//Form Handling With Events
-var checks = document.getElementsByClassName('event_checks');
-  var strEvents = "";
-  var amountToPay=0;
-function selectEvents() {
-  for(i=0; i<18; i++)
-  {
-      switch(checks[i].checked)
-      {
-          case true:
-              strEvents = strEvents + checks[i].name+", ";
-              //strEvents.concat(getEventName(i));
-              //strEvents.concat(checks[i].name, ", ");
-              var amt = parseInt(checks[i].value);
-              amountToPay += amt;           
-              break;
-      }
-  }
-  //strEvents.slice(0,-2);
-  window.alert(amountToPay);
-  document.getElementById('amountLabel').innerHTML="Total Amount: "+amountToPay;
-  document.getElementById('eventLabel').value = strEvents;
-  document.getElementById('eventBill').value = amountToPay;
-  document.getElementById('eventLabel1').innerHTML="Events Selected : "+strEvents;
-}
-
-//Send Transaction data to Teknothon
-function sendData()
-{
-   document.getElementById('modalLabel').innerHTML = "To Pay : "+amountToPay;
-}
 
 // get all data in form and return object
 function getFormData() {
@@ -54,7 +23,6 @@ function getFormData() {
   }).map(function(k) {
     if(elements[k].name !== undefined) {
       return elements[k].name;
-      
     // special case for Edge's html collection
     }else if(elements[k].length > 0){
       return elements[k].item(0).name;
@@ -83,8 +51,8 @@ function getFormData() {
         }
       }
     }
-
   });
+
   // add form-specific values into the data
   data.formDataNameOrder = JSON.stringify(fields);
   data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
@@ -103,7 +71,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     return false;
   }
   */
-  //data.events=strEvents + " ";
+
   if( !validEmail(data.email) ) {   // if email is not valid show error
     document.getElementById("email-invalid").style.display = "block";
     return false;
@@ -131,6 +99,6 @@ function loaded() {
   console.log("Contact form submission handler loaded successfully.");
   // bind to the submit event of our form
   var form = document.getElementById("gform");
-  form.addEventListener("submit", handleFormSubmit, false);
+  form.addEventListener("submit",handleFormSubmit, false);
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
