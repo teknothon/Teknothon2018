@@ -3320,6 +3320,19 @@ button.close {
   align-items: center;
   min-height: calc(100% - (0.5rem * 2)); }
 
+/* Overriding styles */
+
+::-webkit-input-placeholder {
+  font-size: 13px!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+     font-size: 13px!important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+     font-size: 13px!important;
+}
+
 .modal-content {
   position: relative;
   display: flex;
