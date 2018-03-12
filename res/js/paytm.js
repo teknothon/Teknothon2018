@@ -35,7 +35,10 @@ function selectEvents() {
   //document.getElementById('eventList').innerHTML="Events Selected : "+strEvents;
   document.getElementById('eventList').value="Events Selected : "+strEvents+"\nBill : "+amountToPay;
 }
-
+function submission()
+{
+    
+}
 //Send Transaction data to Teknothon
 function sendData()
 {
