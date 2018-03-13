@@ -128,7 +128,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                         <div class="row">
                           <div class="col-md-8 order-md-1">
                             <h4 class="mb-3">Enter Details</h4>
-                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit="alert('You have been Registered, Kindly be Present before the start of events.');"
+                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit='$("#thankyou_message").show();'
                             action="https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec">
                             <div class="row">
                                 <div class="col-md-6 mb-3"> <label for="name">Name *</label>
@@ -177,22 +177,23 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                                     <h4 class="modal-title">Select Events</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="Quizical"/>QUIZICAL</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="GAME OF CODING"/>GAME OF CODING</label><br>
+                                                            <label for="Quizical"><input type="checkbox" class="event_checks" value=50 name="Quizical"/>QUIZICAL</label><br>
+                                                            <label for="GAME OF CODING"><input type="checkbox" class="event_checks" value=50 name="GAME OF CODING"/>GAME OF CODING</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="LAN MULTIPLAYER GAMING"/>LAN MULTIPLAYER GAMING</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=40 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=50 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=100 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS"/>WORKSHOP SESSIONS</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="FEEL THE BEAT-DANCE COMPETITION"/>FEEL THE BEAT-DANCE COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=100 name="FEEL THE BEAT-DANCE COMPETITION (SOLO)"/>FEEL THE BEAT-DANCE COMPETITION (SOLO)</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=500 name="FEEL THE BEAT-DANCE COMPETITION (GROUP)"/>FEEL THE BEAT-DANCE COMPETITION (GROUP)</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="SCHOOL OF ROCK - BATTLE OF BANDS"/>SCHOOL OF ROCK - BATTLE OF BANDS</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=200 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="SARGAM-THE SINGING COMPETITION"/>SARGAM-THE SINGING COMPETITION</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="PIXELS-THE PHOTOGRAPHY COMPETITION"/>PIXELS-THE PHOTOGRAPHY COMPETITION</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="TEKTION-THE MOVIEMAKING COMPETITION"/>TEKTION-THE MOVIEMAKING COMPETITION</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=80 name="TEKTION-THE MOVIEMAKING COMPETITION"/>TEKTION-THE MOVIEMAKING COMPETITION</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=250 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=200 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="COUCH-POTATO"/>COUCH-POTATO</label><br>
-                                                            <label><input type="checkbox" class="event_checks" value=50 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
+                                                            <label><input type="checkbox" class="event_checks" value=500 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="FACE PAINTING"/>FACE PAINTING</label><br>
                                                             <label><input type="checkbox" class="event_checks" value=50 name="CHESSMATE"/>CHESSMATE</label><br>               
                                                     </div>
@@ -206,12 +207,12 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                     </div>
                             </div>
                             <div class="mb-3"> <label for="eventList">Event Details</label>
-                                    <textarea class="form-control" placeholder="Unselect ALL events if U only want to attend the fest.. Free Of Cost" name="eventList" disabled id="eventList"></textarea>
+                                    <textarea class="form-control" placeholder="No Events Selected.. Bill : 0" name="eventList" disabled id="eventList"></textarea>
                             </div>
                             <br><br>
                             <h2 class="mb-3"><b>Payment</b></h2>
                             <div class="row">
-                                <div class="d-block my-3" style="margin-left:5%; width:45%">
+                                <div class="d-block my-3" style="margin-left:5%; width:50%">
                                     <div class="custom-control custom-radio">
                                       <input id="paytmRadio" checked name="paymentMethod" type="radio" class="custom-control-input">
                                       <label class="custom-control-label" for="paytmRadio">PayTM</label>
@@ -271,8 +272,9 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                     
                                 </span>   
                             </div><br>
-                            <button type="button" class="btn button-success pure-button button-xlarge btn-primary btn-block w-25 text-center mx-auto" id="getModal" data-toggle="modal" 
-                            data-target="#cash_id" onclick="javascript:sendData();"><i class="fa fa-paper-plane"></i>Register</button><br>
+                            <input type="button" class="btn button-success pure-button button-xlarge btn-primary btn-block w-25 text-center mx-auto" id="getModal" data-toggle="modal"
+                            data-target="#cash_id" onclick="javascript:sendData();" value="Register">
+                            <br>
                           </form>
                             <!-- Customise the Thankyou Message People See when they submit the form: -->
                             <div style="display:none;" id="thankyou_message">
@@ -468,6 +470,12 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
       <script src="../res/js/countdown.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          $("paytmRadio").click(function(){
+            $("#getModal").prop("value","Pay");        
+          });
+          $("cashRadio").click(function(){
+            $("#getModal").prop("value","Register");        
+          });
           $("#getModal").click(function(){
             var isCheckedCash = $('#cashRadio').is(':checked');
             switch(isCheckedCash)
