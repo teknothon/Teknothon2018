@@ -35,9 +35,20 @@ function selectEvents() {
   //document.getElementById('eventList').innerHTML="Events Selected : "+strEvents;
   document.getElementById('eventList').value="Events Selected : "+strEvents+"\nBill : "+amountToPay;
 }
-function submission()
+function noEventSelected()
 {
-    
+    var eventSelected=false;
+    var checks = document.getElementsByClassName('event_checks');
+    for(i=0; i<19; i++)
+    {
+        switch(checks[i].checked)
+        {
+            case true: 
+                eventSelected=true;  
+                break;
+        }
+    }
+    return !eventSelected;
 }
 //Send Transaction data to Teknothon
 function sendData()

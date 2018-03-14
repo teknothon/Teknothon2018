@@ -163,8 +163,8 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                 -->
                             <!--Modal Start -->
                             <div class="fill-container">
-                                    <div class="no-padding-rl position-relative text-center">
-                                        <button type="button" name="button" class="btn btn-primary btn-block btn-lg w-50 mx-auto text-center" onclick="javascript:selectEvents;" data-toggle="modal" data-target="#EventsModal"><span align="right" class="fa fa-angle-double-up"></span>  Select Events  <span class="fa fa-angle-double-up"></span></button>
+                                    <div class="no-padding-rl position-relative text-center"><label for="eventSelButton" id="noEvent">Please Select At Least One Event !!!</label>
+                                        <button type="button" name="button" id="eventSelButton" class="btn btn-primary btn-block btn-lg w-50 mx-auto text-center" onclick="javascript:selectEvents;" data-toggle="modal" data-target="#EventsModal"><span align="right" class="fa fa-angle-double-up"></span>  Select Events  <span class="fa fa-angle-double-up"></span></button>
                                         <span class="display-block font-family-alt font-weight-700 letter-spacing-2 text-gray-dark-2 text-small text-uppercase">
                                             <!-- Modal -->
                                             <div class="modal fade sizeAdjustModal" id="EventsModal" role="dialog">
@@ -272,7 +272,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                 </span>   
                             </div><br>
                             <input type="button" class="btn button-success pure-button button-xlarge btn-primary btn-block w-25 text-center mx-auto" id="getModal" data-toggle="modal"
-                            data-target="#cash_id" onclick="javascript:sendData();" value="Register">
+                            data-target="#no_id" onclick="javascript:sendData();" value="Register">
                             <br>
                           </form>
                             <!-- Customise the Thankyou Message People See when they submit the form: -->
@@ -528,6 +528,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
       <script src="../res/js/countdown.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          $('#noEvent').hide();
           $("paytmRadio").click(function(){
             $("#getModal").prop("value","Pay");        
           });
@@ -535,7 +536,20 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
             $("#getModal").prop("value","Register");        
           });
           $("#getModal").click(function(){
-            var isCheckedCash = $('#cashRadio').is(':checked');
+              var NoSel = noEventSelected();
+              
+              if(NoSel)
+              {
+                  $('#noEvent').show();
+                  $('#noEvent').focus();
+                  $('#getModal').attr("data-target","#no_id");
+                  var isCheckedCash = null;
+              }
+              else {
+                $('#noEvent').hide();
+                var isCheckedCash = $('#cashRadio').is(':checked');
+              }
+            
             switch(isCheckedCash)
             {
               case (true):
@@ -547,8 +561,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                   $('#getModal').attr("data-target","#paytm_id");
                   $('#transaction').val("");
                   $('#gform').attr("action","https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec");
-                  break;
-                  
+                  break;     
             }
         });
         $('#EventsModal').focusout(function(){
@@ -556,9 +569,6 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
           });
       });
       </script>
-      
-
-
     </body>
     
     </html>
