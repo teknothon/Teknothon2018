@@ -88,5 +88,16 @@ function changeCP()
     document.getElementById('paytm_id').style.id="modal_id";
 }
 
-
+function submission(){
+    var frm = $('#gform').valid();
+    var txn = $('#transaction').valid();
+    if(frm && txn){
+        frm.submit();
+        $("#thankyou_message").show();
+    }
+    else {
+        $('#txn').focus();
+    }
+    
+}
 

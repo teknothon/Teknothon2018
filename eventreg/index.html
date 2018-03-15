@@ -127,13 +127,13 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                         <div class="row">
                           <div class="col-md-8 order-md-1">
                             <h4 class="mb-3">Enter Details</h4>
-                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit='$("#thankyou_message").show();'
+                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit='javascript:submission();'
                             action="https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec">
                             <div class="row">
                                 <div class="col-md-6 mb-3"> <label for="name">Name *</label>
                                     <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
                                 </div>
-                                <div class="col-md-6 mb-3"> <label for="courseName">Course Name</label>
+                                <div class="col-md-6 mb-3"> <label for="courseName">Course Name *</label>
                                    <input required type="text" class="form-control" placeholder="Course" name="courseName" id="courseName">
                                 </div>
                             </div>
@@ -528,6 +528,9 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
       <script src="../res/js/countdown.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          frm.submit(function(e){
+            e.preventDefault();
+        });
           $('#noEvent').hide();
           $("paytmRadio").click(function(){
             $("#getModal").prop("value","Pay");        
@@ -536,6 +539,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
             $("#getModal").prop("value","Register");        
           });
           $("#getModal").click(function(){
+              var frm=$('#gform').valid();
               var NoSel = noEventSelected();
               
               if(NoSel)
@@ -544,6 +548,28 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                   $('#noEvent').focus();
                   $('#getModal').attr("data-target","#no_id");
                   var isCheckedCash = null;
+              }
+              else if(!frm){
+                if($('#name').valid()==0)
+                {
+                    $('#name').focus();
+                } 
+                else if($('#email').valid()==0)
+                {
+                    $('#email').focus();
+                }
+                else if($('#College').valid()==0)
+                {
+                    $('#College').focus();
+                }
+                else if($('#courseName').valid()==0)
+                {
+                    $('#courseName').focus();
+                }
+                else if($('#Phone').valid()==0)
+                {
+                    $('#Phone').focus();
+                }
               }
               else {
                 $('#noEvent').hide();
