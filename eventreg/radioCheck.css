@@ -4,6 +4,13 @@ body {
  input[type=radio]/*, input[type=checkbox]*/ {
      display:none;
    }
+  input[type=checkbox]
+  {
+    clear:none;
+    width:auto;
+    float:right;
+  }
+ 
  
  input[type=radio] + label {
      display:inline-block;
