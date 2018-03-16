@@ -35,7 +35,7 @@ function selectEvents() {
   //document.getElementById('eventList').innerHTML="Events Selected : "+strEvents;
   document.getElementById('eventList').value="Events Selected : "+strEvents+"\nBill : "+amountToPay;
 }
-function noEventSelected()
+function noEventSelected() 
 {
     var eventSelected=false;
     var checks = document.getElementsByClassName('event_checks');
@@ -48,7 +48,7 @@ function noEventSelected()
                 break;
         }
     }
-    return !eventSelected;
+    return !eventSelected; //return true if no event selected
 }
 //Send Transaction data to Teknothon
 function sendData()
@@ -100,4 +100,3 @@ function submission(){
     }
     
 }
-

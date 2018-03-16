@@ -127,7 +127,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                         <div class="row">
                           <div class="col-md-8 order-md-1">
                             <h4 class="mb-3">Enter Details</h4>
-                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit='javascript:submission();'
+                            <form id="gform" method="POST" data-email="sqas.sq1@gmail.com" onSubmit='$("#thankyou_message").show();'
                             action="https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec">
                             <div class="row">
                                 <div class="col-md-6 mb-3"> <label for="name">Name *</label>
@@ -182,7 +182,8 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                                             <label for=""><input type="checkbox" class="event_checks" value=50 name="LAN MULTIPLAYER GAMING (MOBILE)"/>LAN MULTIPLAYER GAMING - MOBILE</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=50 name="BUGVILLA BUG-HUNTING"/>BUGVILLA BUG-HUNTING</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=100 name="WEBSITE DESIGN"/>WEBSITE DESIGN</label><br>
-                                                            <label for=""><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS"/>WORKSHOP SESSIONS</label><br>
+                                                            <label for=""><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS (Linux)"/>WORKSHOP SESSIONS - Linux</label><br>
+                                                            <label for=""><input type="checkbox" class="event_checks" value=50 name="WORKSHOP SESSIONS (Git and Github)"/>WORKSHOP SESSIONS - Git and Github</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=100 name="FEEL THE BEAT-DANCE COMPETITION (SOLO)"/>FEEL THE BEAT-DANCE COMPETITION (SOLO)</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=500 name="FEEL THE BEAT-DANCE COMPETITION (GROUP)"/>FEEL THE BEAT-DANCE COMPETITION (GROUP)</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=200 name="EMBER-THE FASHION SHOW"/>EMBER-THE FASHION SHOW</label><br>
@@ -192,7 +193,6 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                                             <label for=""><input type="checkbox" class="event_checks" value=250 name="TPL-CRICKET TOURNAMENT"/>TPL-CRICKET TOURNAMENT</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=200 name="TREASURE HUNT"/>TREASURE HUNT</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=50 name="COUCH-POTATO"/>COUCH-POTATO</label><br>
-                                                            <label for=""><input type="checkbox" class="event_checks" value=500 name="NUKKAD NAATAK"/>NUKKAD NAATAK</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=50 name="FACE PAINTING"/>FACE PAINTING</label><br>
                                                             <label for=""><input type="checkbox" class="event_checks" value=50 name="CHESSMATE"/>CHESSMATE</label><br>               
                                                     </div>
@@ -238,7 +238,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn btn-primary submitBtn" onclick="javascript:sendData();">SUBMIT</button>
+                                            <button type="submit" id="txnButton" class="btn btn-primary submitBtn" onclick="javascript:sendData();">SUBMIT</button>
                                             <!-- <input type="submit" value="Proceed" class="button-success btn btn-default" data-dismiss="modal" onclick="javascript:sendData();">
                                            <button type="submit" id="paytmSubmit" class="button-success btn btn-default" data-dismiss="modal" onclick="javascript:sendData();">Close !</button>
                                            </div> -->
@@ -311,8 +311,9 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                       <span class="text-muted">100 Rs</span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                   <div>
-                                    <h6 class="my-0"><b>Workshop Session</b></h6> <small class="text-muted">Attend A Workshop</small></div>
-                                      <span class="text-muted"> -- </span> </li>
+                                    <h6 class="my-0"><b>Workshop Session</b></h6> <small class="text-muted">Linux Workshop</small><br>
+                                  <small class="text-muted">Git and Github</small></div>
+                                      <span class="text-muted"> 50 Rs <br> 50 Rs </span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                   <div>
                                     <h6 class="my-0"><b>Feel The Beat</b></h6> <small class="text-muted">A Dance Competition (SOLO)</small><br>
@@ -346,11 +347,6 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                     <h6 class="my-0"><b>Couch Potato</b></h6> <small class="text-muted">Couch Potato</small></div>
                                       <span class="text-muted">50 Rs</span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
-                                  <div>
-                                    <h6 class="my-0"><b>Nukkad Naatak</b></h6> <small class="text-muted">Nukkad Naatak</small></div>
-                                      <span class="text-muted">500 Rs</span> </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                  <div>
                                     <h6 class="my-0"><b>Face Painting</b></h6> <small class="text-muted">Face Painting</small></div>
                                       <span class="text-muted">50 Rs</span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
@@ -528,10 +524,9 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
       <script src="../res/js/countdown.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
-          frm.submit(function(e){
-            e.preventDefault();
-        });
+          frm=$('#gform');
           $('#noEvent').hide();
+          $('#txnButton').hide();
           $("paytmRadio").click(function(){
             $("#getModal").prop("value","Pay");        
           });
@@ -549,28 +544,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                   $('#getModal').attr("data-target","#no_id");
                   var isCheckedCash = null;
               }
-              else if(!frm){
-                if($('#name').valid()==0)
-                {
-                    $('#name').focus();
-                } 
-                else if($('#email').valid()==0)
-                {
-                    $('#email').focus();
-                }
-                else if($('#College').valid()==0)
-                {
-                    $('#College').focus();
-                }
-                else if($('#courseName').valid()==0)
-                {
-                    $('#courseName').focus();
-                }
-                else if($('#Phone').valid()==0)
-                {
-                    $('#Phone').focus();
-                }
-              }
+              
               else {
                 $('#noEvent').hide();
                 var isCheckedCash = $('#cashRadio').is(':checked');
@@ -593,6 +567,9 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
         $('#EventsModal').focusout(function(){
             selectEvents();
           });
+        $('#transaction').on('input',function(e){
+            $('#txnButton').show();
+        });
       });
       </script>
     </body>
