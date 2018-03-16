@@ -272,7 +272,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                 </span>   
                             </div><br>
                             <input type="button" class="btn button-success pure-button button-xlarge btn-primary btn-block w-25 text-center mx-auto" id="getModal" data-toggle="modal"
-                            data-target="#no_id" onclick="javascript:sendData();" value="Register">
+                            data-target="#no_id" onclick="javascript:sendData();" value="Pay">
                             <br>
                           </form>
                             <!-- Customise the Thankyou Message People See when they submit the form: -->
@@ -528,12 +528,28 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
           frm=$('#gform');
           $('#noEvent').hide();
           $('#txnButton').hide();
-          $("paytmRadio").click(function(){
-            $("#getModal").prop("value","Pay");        
+          $("#paytmRadio").change(function(){
+            if($('#paytmRadio:checked').val())  
+            {
+                //console.log("Paytm Changed : " + $('#paytmRadio:checked').val());
+                //console.log("Cash : "+$('#cashRadio:checked').val());
+                $("#getModal").val("Pay");
+              }
           });
-          $("cashRadio").click(function(){
-            $("#getModal").prop("value","Register");        
+          $("#cashRadio").change(function(){
+            if($('#cashRadio:checked').val())  
+            {
+                //console.log("Cash Changed : " + $('#cashRadio:checked').val());
+                //console.log("Paytm : "+$('#paytmRadio:checked').val());
+                $("#getModal").val("Register");
+              }
           });
+          // $("paytmRadio").click(function(){
+          //   $('#getModal').val("Pay");        
+          // });
+          // $("cashRadio").click(function(){
+          //   $("#getModal").val("Register");        
+          // });
           $("#getModal").click(function(){
               var frm=$('#gform').valid();
               var NoSel = noEventSelected();
@@ -557,12 +573,12 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
             {
               case (true):
                   $('#getModal').attr("data-target","#cash_id");
-                  $('#transaction').val("CashPayments");
+                  $('#transaction').val("CashPayments"); 
                   $('#gform').attr("action","https://script.google.com/macros/s/AKfycbynySPIdsPKzBAC3FC9x3CSKunWEKAdqfeRPMeves2gliM657HY/exec");
                   break;
               case (false):
                   $('#getModal').attr("data-target","#paytm_id");
-                  $('#transaction').val("");
+                  $('#transaction').val("");                  
                   $('#gform').attr("action","https://script.google.com/macros/s/AKfycbxzVA8LniWhpG27gh1NzZO6IrKqDCAA7-GT8C2bukm8GWCFbO0/exec");
                   break;     
             }
@@ -573,6 +589,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
         $('#transaction').on('input',function(e){
             if($('#gform').valid)
             {
+              if($('#transaction').size)
               $('#txnButton').show();
             }
             else {
