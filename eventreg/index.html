@@ -283,7 +283,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                             <!-- END -->
                           </div>
                           <div class="col-md-4 order-md-2">
-                              <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Readme !!</b></span><span class="badge badge-secondary badge-pill">17</span> </h4>
+                              <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Readme !!</b></span><span class="badge badge-secondary badge-pill">16</span> </h4>
                               <ul class="list-group">
                               <div>
                                 <li class="list-group-item d-flex align-items-end justify-content-between">
@@ -313,7 +313,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                   <div>
                                     <h6 class="my-0"><b>Workshop Session</b></h6> <small class="text-muted">Linux Workshop</small><br>
                                   <small class="text-muted">Git and Github</small></div>
-                                      <span class="text-muted"> 50 Rs <br> 50 Rs </span> </li>
+                                      <span class="text-muted"><br>50 Rs <br> 50 Rs </span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                   <div>
                                     <h6 class="my-0"><b>Feel The Beat</b></h6> <small class="text-muted">A Dance Competition (SOLO)</small><br>
@@ -347,6 +347,7 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                                     <h6 class="my-0"><b>Couch Potato</b></h6> <small class="text-muted">Couch Potato</small></div>
                                       <span class="text-muted">50 Rs</span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
+                                  <div>
                                     <h6 class="my-0"><b>Face Painting</b></h6> <small class="text-muted">Face Painting</small></div>
                                       <span class="text-muted">50 Rs</span> </li>
                                 <li class="list-group-item d-flex justify-content-between">
@@ -545,9 +546,11 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
                   var isCheckedCash = null;
               }
               
-              else {
+              else if(frm){
                 $('#noEvent').hide();
                 var isCheckedCash = $('#cashRadio').is(':checked');
+              } else {
+                window.alert("Kindly Enter All Required Fields");
               }
             
             switch(isCheckedCash)
@@ -568,7 +571,13 @@ Event website by @SahilQaiser, Adapted from github project of Syed Faheel Ahmad 
             selectEvents();
           });
         $('#transaction').on('input',function(e){
-            $('#txnButton').show();
+            if($('#gform').valid)
+            {
+              $('#txnButton').show();
+            }
+            else {
+              $('#txnButton').hide();
+            }
         });
       });
       </script>
