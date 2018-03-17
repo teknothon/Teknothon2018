@@ -796,3 +796,18 @@
 .btn button{
   width: 100%;
 }
+/*FONTS*/
+@font-face {
+  font-family: "SLANT";
+  src: url("../res/fonts/SLANT.TTF");
+  src: 
+  url("../res/fonts/slant.woff") format("woff"),
+  url("../res/fonts/slant.woff2") format("woff2"),
+  }
+@font-face {
+  font-family: "Diavlo";
+  src: url("../res/fonts/diavlo.otf");
+  src: 
+  url("../res/fonts/diavlo.woff") format("woff"),
+  url("../res/fonts/diavlo.woff2") format("woff2"),
+  }
