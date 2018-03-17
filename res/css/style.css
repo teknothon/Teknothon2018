@@ -796,18 +796,26 @@
 .btn button{
   width: 100%;
 }
+
 /*FONTS*/
 @font-face {
-  font-family: "SLANT";
-  src: url("../res/fonts/SLANT.TTF");
+  font-family: "Slant";
+  src: url("../fonts/SLANT.TTF");
   src: 
-  url("../res/fonts/slant.woff") format("woff"),
-  url("../res/fonts/slant.woff2") format("woff2"),
+  url("../fonts/slant.woff") format("woff"),
+  url("../fonts/slant.woff2") format("woff2"),
+  }
+
+  .sponsor{
+    font-family: 'Diavlo';
+  }
+  .slant{
+    font-family: 'Slant';
   }
 @font-face {
   font-family: "Diavlo";
-  src: url("../res/fonts/diavlo.otf");
+  src: url("../fonts/diavlo.otf");
   src: 
-  url("../res/fonts/diavlo.woff") format("woff"),
-  url("../res/fonts/diavlo.woff2") format("woff2"),
+  url("../fonts/diavlo.woff") format("woff"),
+  url("../fonts/diavlo.woff2") format("woff2"),
   }
