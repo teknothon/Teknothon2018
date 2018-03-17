@@ -70,6 +70,7 @@ function sendData()
    
    //document.getElementById('getModal').style.data-target = "block";
    document.getElementById('modalLabel').innerHTML = "To Pay : "+amountToPay;
+   document.getElementById('BILL').value = amountToPay;
    document.getElementById('modalLabelcash').innerHTML = "To Pay : "+amountToPay;
    //document.getElementById('eventList').value = strEvents;
    paid=true;
