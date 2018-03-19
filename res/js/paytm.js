@@ -99,5 +99,4 @@ function submission(){
     else {
         $('#txn').focus();
     }
-    
 }
