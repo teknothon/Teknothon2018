@@ -66,8 +66,12 @@ function sendData()
     //$('#getModal').style('data-target','#modal_cash');
     //$('#getModal').target('#modal_cash');
     $('#cashSubmit').click(function(){
-       $('#cash_id').hide();
-   })
+        $('#cash_id').hide();
+    })
+    $('#txnButton').click(function(){
+        $('#paytm_id').hide();
+    })
+     
    selectEvents();
    
    //document.getElementById('getModal').style.data-target = "block";
