@@ -15,7 +15,7 @@ function selectEvents() {
   amountToPay = 0;
   paid=false;
   var checks = document.getElementsByClassName('event_checks');
-  for(i=0; i<13; i++)
+  for(i=0; i<14; i++)
   {
       switch(checks[i].checked)
       {
@@ -39,7 +39,7 @@ function noEventSelected()
 {
     var eventSelected=false;
     var checks = document.getElementsByClassName('event_checks');
-    for(i=0; i<13; i++)
+    for(i=0; i<14; i++)
     {
         switch(checks[i].checked)
         {
